@@ -1,5 +1,5 @@
 const { mockRandom } = require("jest-mock-random");
-const { guessingGame } = require("./guessing-game");
+const { guessingGame } = require('./guessing-game');
 
 describe("guessingGame", function() {
   let game;
