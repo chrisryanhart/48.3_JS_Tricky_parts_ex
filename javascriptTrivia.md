@@ -59,4 +59,44 @@ d) '112'.  The first one if converted to a number, but then converted back after
 e) 'NaN2'.  '-' can't be used with strings. Then NaN is converted to a string because a + operator is seen with a string.  
 f) NaN.  This is because you cannot do addtion with NaN. 
 
-15. 
+15. Adding a setTimeout will pass the action off to the browser so that the call stack will handle the recursion instead.
+
+16. A closure is allows inner functions to remember variables from outer functions after the outer function is executed.  It is used to incapsulate logic and keep variables private.  
+
+Ex.:
+function guessingGame() {
+    let hasWon = false;
+    let randNum = Math.floor(Math.random()*100);
+    let guessCount = 0;
+
+    return function guessNum(guessedNum){
+        if(hasWon){
+            return 'The game is over, you already won!';
+        }
+
+        guessCount ++;
+    
+        if(randNum === guessedNum){
+            hasWon = true;
+            let message = `You win! You found ${randNum} in ${guessCount} guesses.`;
+            return message;
+        }
+        if(guessedNum > randNum){
+            return `${guessedNum} is too high!`;
+        }
+        if(guessedNum < randNum){
+            return `${guessedNum} is too low!`;
+        };
+    
+    };
+}
+
+17. The expressions are converted to boolean values and then evaluated by the || and && operators.  If one of the || values is false, the first true value is returned.  If both of the && values are true, the 2nd value is returned.  Therefore:
+0 || 1 = 1
+1 || 2 = 1
+0 && 1 = 0
+1 && 2 = 2
+
+18. The === checks for strict equality and therefore returns false.  The == is loose equality.  The string gets converted to false and therefore the first expression returns true.
+
+19. 
