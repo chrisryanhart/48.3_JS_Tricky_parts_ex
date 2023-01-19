@@ -99,4 +99,24 @@ function guessingGame() {
 
 18. The === checks for strict equality and therefore returns false.  The == is loose equality.  The string gets converted to false and therefore the first expression returns true.
 
-19. 
+19. Javascript automatically stringifies the parameter value.  a[b] and a[c] are both the same.  456 was the last property set and therefore a[b] =456.
+
+20. This is a recursive function call.  It will be called until n=1.  The result is 10!.
+
+21. x will be 1.  The inner function is able to access the outter function's parameters.  
+
+22.  The code outputs undefined and John Doe.  You can fix this error by binding hero like this hero.getSecretIdentity.bind(hero);
+
+23.  function getElements()
+
+24. 
+
+25. The var statements get hoisted to the top of the function scope its inside of.  But the parameter in the catch block is only visible inside itself.  It will print 1, undefined, 2.
+
+26. The result is undefined.  Witihn the function, x is present, but not assigned a value.
+
+27. i is assigned only to each block of the for loop execution.  Therefore, the output is 0, 1, 2,3,4.
+
+28. The first statement is true, but the 2nd is false.  It is false because the first comparison is true which equates to one.  Then 1>1 is false.
+
+29. Use 
