@@ -107,9 +107,15 @@ function guessingGame() {
 
 22.  The code outputs undefined and John Doe.  You can fix this error by binding hero like this hero.getSecretIdentity.bind(hero);
 
-23.  function getElements()
+23.  function Traverse          (p_element,   p_callback) {
+   p_callback(p_element);
+   var list = p_element.children;
+   for (var i = 0; i < list.length; i++) {
+       Traverse(list[i],p_callback);  // recursive call
+   }
+}
 
-24. 
+24. The first this.length call references 10.  The scope of the the second call is the arguments array which has a length of 2.
 
 25. The var statements get hoisted to the top of the function scope its inside of.  But the parameter in the catch block is only visible inside itself.  It will print 1, undefined, 2.
 
@@ -119,4 +125,24 @@ function guessingGame() {
 
 28. The first statement is true, but the 2nd is false.  It is false because the first comparison is true which equates to one.  Then 1>1 is false.
 
-29. Use 
+29. Use array.push to add to the end and array.unshift to add to the beginning.
+
+30.  a) It will create empty spots and assign 99 to the 10th spot.
+b) a[6] will return undefined because of the empty space.
+
+31. This will output true because they NULL is treated as an undefined variable.  It should be null instead if the keyword is to be used.
+
+32. It will be 'string'.  'number' is returned first, which is a type of string.
+
+33. It will be 5, 5, 5, 5, 5.  That's because var is scoped to the complete for loop.  Therefore, the settimeouts execute at the end of the loop when i = 5.
+
+34. NaN represents itself, not a number.  You can test it by using Number.isNaN().
+
+35. Output = 3.  That is because b is not declared within the inner function until b=3.  Then the number is logged.  
+
+36. Use (typeof x === 'number') && (x % 1 === 0). Or use Number.isInteger();
+
+37. var obj = {a: 1 ,b: 2}
+var objclone = Object.assign({},obj);
+
+This only works though because there are no nested elements.  Otherwise, the nested elements would reference the same piece of memory.
